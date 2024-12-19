@@ -64,11 +64,12 @@
     const errorMessage = document.getElementById('errorMessage');
 
     form.addEventListener('submit', function(event) {
-      event.preventDefault();
+      event.preventDefault(); // Prevent the form from submitting
       if (input.value === correctPassword) {
-        window.location.href = "home.html"; // Redirect to home.html
+        window.location.href = "home.html"; // Redirect to home.html if the password is correct
       } else {
-        errorMessage.style.display = "block";
+        errorMessage.style.display = "block"; // Show an error message if the password is incorrect
+        input.value = ""; // Clear the password input
       }
     });
   </script>
